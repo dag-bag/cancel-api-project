@@ -42,7 +42,9 @@ const Main = () => {
             abortController.current = null
         }
     }
-
+ const hitCorrcurentApiCall = async () =>{
+    return await  Promise.allSettled([fetchData,fetchData,fetchData])
+ }
     return (
         <div className="min-h-screen bg-gray-100 p-8">
             <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
@@ -50,7 +52,7 @@ const Main = () => {
                 
                 <div className="space-x-4 mb-6">
                     <button 
-                        onClick={fetchData}
+                        onClick={hitCorrcurentApiCall}
                         disabled={loading}
                         className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded disabled:opacity-50"
                     >
